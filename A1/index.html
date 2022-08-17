@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teste Javascript</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="imagens/apagada.jpg" id="luz" />
+    <script>
+      const lampadaEl = document.getElementById("luz")
+
+      const lampadaAcesaPath = "imagens/acesa.jpg"
+      const lampadaApagadaPath = "imagens/apagada.jpg"
+      const lampadaQuebradaPath = "imagens/quebrada.jpg"
+
+      lampadaEl.addEventListener('mousemove', () => {
+        lampadaEl.src = lampadaAcesaPath
+      })
+
+      lampadaEl.addEventListener('mouseout', () => {
+        lampadaEl.src = lampadaApagadaPath
+      })
+
+      lampadaEl.addEventListener('click', () => {
+        lampadaEl.src = lampadaQuebradaPath
+      })
+
+    </script>
+  </body>
+  <html></html>
+</html>
